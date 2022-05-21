@@ -1,0 +1,16 @@
+database:
+  host: pg-monitoring-fidelperez-ea89.aivencloud.com
+  port: 21770
+  database: monitoring
+  credentials_secret: pgcredentials # Name of the kubernetes secret containing the login credentials
+  credentials_namespace: default # Namespace where the secrets are stored
+kafka:
+  service_uri: kafka-monitoring-fidelperez-ea89.aivencloud.com:21772 # Kafka service uri
+  credentials_secret: kafka-certs # Name of the kubernetes secret containing the kafka certificates
+  credentials_namespace: default # Namespace where the secrets are stored
+  secrets_storage_folder: ./ # When running production code this should be in a mounted volume which path defaults to '/run/secrets/'
+  topic_name: website_availability # Topic name used by the producer and consumer.
+monitor:
+  websites_per_container: 1 # Amount of url's checked by each container. This can be 
+  timeout: 10 # Seconds of timeout when checking a website availability
+  check_periodicity: 60 # Seconds between checks.

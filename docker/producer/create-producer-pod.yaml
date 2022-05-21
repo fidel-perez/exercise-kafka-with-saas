@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: producer-pod
+spec:
+   containers:
+   - name: producer-container01
+     image: monitoring_producer:latest
+     env:
+     - name: ID
+        value: 1

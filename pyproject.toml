@@ -1,0 +1,7 @@
+[project]
+name = "monitoring_websites_assignment"
+description = "Assignment for creating a website monitoring tool"
+version = "0.1.0"
+authors = [
+    { name = "Fidel Perez", email = "armagedoom@gmail.com" }
+]

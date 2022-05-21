@@ -1,0 +1,10 @@
+kafka-python
+psycopg2
+PyYAML
+click
+kubernetes
+dataclasses-json
+testing.postgresql
+pytest
+pytest-mock
+validators
